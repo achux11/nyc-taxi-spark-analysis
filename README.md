@@ -1,8 +1,8 @@
 # NYC Taxi Demand & Pricing Analysis (PySpark)
 
 [![CI](https://github.com/achux11/nyc-taxi-spark-analysis/actions/workflows/ci.yml/badge.svg)](https://github.com/achux11/nyc-taxi-spark-analysis/actions/workflows/ci.yml)
-![Python](https://img.shields.io/badge/Python-3.11-blue)
-![Spark](https://img.shields.io/badge/Apache%20Spark-3.5-orange)
+[![Python](https://img.shields.io/badge/Python-3.11-blue)](https://www.python.org/)
+[![Spark](https://img.shields.io/badge/Apache%20Spark-3.5-orange)](https://spark.apache.org/docs/3.5.3/api/python/)
 
 **Does rain bring more taxi riders?** What drives taxi demand and fares in New York City? This project joins NYC taxi trip records with zone and weather data in **Apache Spark** and answers three business questions:
 
