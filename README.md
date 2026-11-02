@@ -3,12 +3,15 @@
 [![CI](https://github.com/achux11/nyc-taxi-spark-analysis/actions/workflows/ci.yml/badge.svg)](https://github.com/achux11/nyc-taxi-spark-analysis/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/Python-3.11-blue)](https://www.python.org/)
 [![Spark](https://img.shields.io/badge/Apache%20Spark-3.5-orange)](https://spark.apache.org/docs/3.5.3/api/python/)
+[![Tableau](https://img.shields.io/badge/Tableau-Dashboard-E97627?logo=tableau&logoColor=white)](https://public.tableau.com/app/profile/achintya.vamshi.nudurupati1091/viz/NYCTaxiDemandPricing/NYCTaxiDemandPricing)
 
-**Does rain bring more taxi riders?** What drives taxi demand and fares in New York City? This project joins NYC taxi trip records with zone and weather data in **Apache Spark** and answers three business questions:
+**Does rain bring more taxi riders?** What drives taxi demand and fares in New York City? This project joins NYC taxi trip records with zone and weather data in **Apache Spark**, answers three business questions, and presents the results in a **Tableau dashboard**:
 
 1. **Does rain change taxi demand?**
 2. **Does trip speed change what a rider pays, borough by borough?**
 3. **Does the day's temperature change how much riders tip?**
+
+> 📊 **[View the interactive Tableau dashboard →](https://public.tableau.com/app/profile/achintya.vamshi.nudurupati1091/viz/NYCTaxiDemandPricing/NYCTaxiDemandPricing)**
 
 > **About this repo:** this analysis started as my Big Data course project at UT Dallas (Fall 2025), built with Hive and Spark. The original code was lost, so I rebuilt it from scratch in PySpark. It answers the same three questions on public data, and anyone can rerun it.
 
@@ -70,13 +73,13 @@ Results are written to `results/`: one CSV and one chart per question, plus a `s
 
 ## Findings from the original course project
 
-From the Fall 2025 course version (Hive + Spark on the TLC trip data, zone lookup and NOAA weather):
+From the Fall 2025 course version (Hive + Spark on the TLC trip data, zone lookup and NOAA weather), visualized in **Tableau Public**:
 
-![Taxi demand by rainfall](docs/images/rain_vs_demand.png)
+[![NYC Taxi Demand & Pricing dashboard in Tableau](https://public.tableau.com/static/images/NY/NYCTaxiDemandPricing/NYCTaxiDemandPricing/1.png)](https://public.tableau.com/app/profile/achintya.vamshi.nudurupati1091/viz/NYCTaxiDemandPricing/NYCTaxiDemandPricing)
+
+*Click the image to open the interactive dashboard.*
 
 **Rain vs. demand:** demand rose with rainfall, from about **112K** trips on an average dry day to **125K** on heavy-rain days, about **12% more**. Correlation between daily trips and rainfall: 0.16.
-
-![Speed vs. cost by borough](docs/images/speed_vs_cost_by_borough.png)
 
 **Speed vs. cost:** the correlation is close to zero in every borough. Fares follow distance and the fare rules, not traffic speed.
 
@@ -84,7 +87,7 @@ From the Fall 2025 course version (Hive + Spark on the TLC trip data, zone looku
 
 **Recommendations:** use rain forecasts to send more taxis to busy zones before storms, and consider rain-based dynamic pricing. Don't forecast tips from temperature; trip and zone patterns matter far more.
 
-*A run of this rebuilt version saves the same charts to `results/`. Its numbers can differ slightly from the course version, since the months and cleaning rules may not match exactly.*
+*A run of this rebuilt version saves the results as CSVs and charts in `results/`, ready to load into Tableau. Its numbers can differ slightly from the course version, since the months and cleaning rules may not match exactly.*
 
 ## Project structure
 
